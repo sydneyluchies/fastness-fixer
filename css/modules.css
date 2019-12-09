@@ -209,10 +209,6 @@ svg.img-flex {
   width: 100%;
 }
 
-.media {
-  overflow: hidden;
-}
-
 .media-img, .media__img {
   float: left;
 }
@@ -228,14 +224,6 @@ svg.img-flex {
 .media-body, .media__body {
   overflow: hidden;
   min-width: 12em; /* Slightly less than 200px, responsiveness built in */
-}
-
-.icon {
-  display: inline-block;
-  position: relative;
-  background: transparent none no-repeat center center;
-  background-size: contain;
-  vertical-align: middle;
 }
 
 .i-16, .i--16 {
@@ -719,14 +707,6 @@ input::-moz-focus-inner {
   -webkit-appearance: none;
 }
 
-fieldset {
-  padding-left: 0;
-  padding-right: 0;
-
-  border: 0;
-  border-top: 2px solid #666;
-}
-
 legend {
   color: inherit;
   display: table;
@@ -1109,12 +1089,6 @@ a:focus, [tabindex="0"]:focus {
   outline-offset: 3px;
 }
 
-.skip-links {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
 .skip-links > li::before {
   content: none; /* Remove the bullets if nice lists is selected */
 }
@@ -1149,153 +1123,4 @@ a:focus, [tabindex="0"]:focus {
 
 [aria-disabled] {
   cursor: default;
-}
-
-.print-only {
-  display: none;
-  visibility: hidden;
-}
-
-.page-break-before {
-  page-break-before: always;
-}
-
-.page-break-after {
-  page-break-after: always;
-}
-
-.no-page-break-inside {
-  page-break-inside: avoid;
-}
-
-@media print {
-
-  /* stylelint-disable declaration-no-important */
-
-  .no-print {
-    display: none !important;
-    visibility: hidden !important;
-  }
-
-  .print-only,
-  .force-print {
-    display: block !important;
-    visibility: visible !important;
-  }
-
-  /* stylelint-enable */
-
-  .visually-hidden.force-print {
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    padding: 0;
-    position: static;
-    width: auto;
-    border: 0;
-    clip: initial;
-    clip-path: none;
-  }
-
-  /*
-   * (c) Fabien Sa || MIT License
-   *     http://bafs.github.io/Gutenberg/
-   */
-
-  table,
-  blockquote,
-  pre,
-  code,
-  figure,
-  li,
-  hr,
-  ul,
-  ol,
-  a,
-  tr {
-    page-break-inside: avoid;
-  }
-
-  h1, h2, h3, h4, h5, h6, p, a {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    page-break-after: avoid;
-    page-break-inside: avoid;
-  }
-
-  h1 + p,
-  h2 + p,
-  h3 + p,
-  h4 + p,
-  h5 + p,
-  h6 + p {
-    page-break-before: avoid;
-  }
-
-  img {
-    page-break-after: auto;
-    page-break-before: auto;
-    page-break-inside: avoid;
-  }
-
-  /* stylelint-disable declaration-no-important */
-
-  pre {
-    white-space: pre-wrap !important;
-    word-wrap: break-word;
-  }
-
-  /* stylelint-enable */
-
-  /* End Gutenberg code */
-
-  /*
-   * (c) HTML5 Boilerplate || MIT License
-   *     https://html5boilerplate.com/
-   */
-
-  /* stylelint-disable declaration-no-important */
-
-  *, *::before, *::after, *::first-letter, *::first-line {
-    background: none transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  /* stylelint-enable */
-
-  a, a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after,
-  a.no-print-href::after,
-  a.href-no-print::after {
-    content: "";
-  }
-
-  thead {
-    display: table-header-group;
-  }
-
-  /* End HTML5 Boilerplate code */
-
 }
